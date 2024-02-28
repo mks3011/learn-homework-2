@@ -15,14 +15,16 @@ def print_days():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
+    date_format = '%d.%m.%Y'
+
     today = date.today()
-    print("Сегодня", today.strftime('%d.%m.%Y'))
+    print("Сегодня", today.strftime(date_format))
 
     yesterday = today - timedelta(days=1)
-    print("Вчера", yesterday.strftime('%d.%m.%Y'))
+    print("Вчера", yesterday.strftime(date_format))
 
     days_before_30 = today - timedelta(days=30)
-    print("30 дней назад", days_before_30.strftime('%d.%m.%Y'))
+    print("30 дней назад", days_before_30.strftime(date_format))
 
 
 def str_2_datetime(date_string):
